@@ -1,0 +1,77 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+#trademark {
+  font-size:10px;
+  vertical-align: super;  
+}
+
+#banner {
+  background-color: rgb(116, 119, 191);
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo,
+#notification,
+#divider,
+#avatar,
+#name {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#logo {
+  font-size: 24px;
+  margin-left: 25px;
+}
+
+#banner-right {
+  vertical-align: middle;
+  float:right;
+  margin-right: 25px;
+  height: 40px;
+}
+
+#notification {
+  margin-right: 20px;  
+}
+
+#notification img {
+  height: 23px;
+  width: 23px;
+}
+
+#divider {
+  height: 100%;
+  width: 1px;
+  background-color: black;
+  opacity: .15;
+}
+
+#avatar img {
+  height: 35px;
+  width: 35px;
+  border-style: hidden;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+#name {
+  font-size: .9em;
+}
