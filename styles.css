@@ -21,35 +21,45 @@ body {
   color: white;
   width: 100%;
   padding: 20px 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+#banner {
   display: flex;
-  justify-content: space-between;
-}
-
-#logo,
-#notification,
-#divider,
-#banner-personal,
-#avatar,
-#name {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#logo {
-  font-size: 24px;
-  margin-left: 25px;
+  flex-direction: column;
+  align-items: center;
 }
 
 #banner-right {
-  vertical-align: middle;
-  float:right;
-  margin-right: 25px;
-  height: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#banner-personal {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  display: block;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+  
+#logo {
+  font-size: 24px;
+}
+
+#logo,
+#banner-right {
+  text-align: center;
 }
 
 #notification {
-  margin-right: 20px;  
+  display: block;
+  float: right;
+  width: 100%;
 }
 
 #notification img {
@@ -62,6 +72,7 @@ body {
   width: 1px;
   background-color: black;
   opacity: .15;
+  display: none;
 }
 
 #avatar img {
@@ -78,39 +89,51 @@ body {
 }
 
 @media (min-width: 768px) {
-  #banner,
-  #banner-right {
+  
+  
+  #banner {
     display: flex;
-    flex-direction: column-reverse;
-  }
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }  
   
   #logo {
-    display: block;
-    margin-left: 0;
-    margin-bottom: 5px;
+    margin-left: 25px;
   }
   
   #logo,
   #banner-right {
-    text-align: center;
-  }
-  
-  #banner {
-    display: block;
+    text-align: initial;
   }
   
   #divider {
-    display: none;
+    display: inline-block;
   }
   
   #notification {
-    display: block;
-    float: right;
-    width: 100%;
+    margin-right: 20px;  
+    width: auto;
   }
   
   #banner-right {
-    float: initial;
-    height: auto;
+    vertical-align: middle;
+    float:right;
+    margin-right: 25px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
   }
+  
+  #avatar {
+    float: left;
+  }
+  
+  #name {
+    float: right;
+  }
+  
+  #banner-personal {
+    display: flex;
+    align-items: center;
 }
