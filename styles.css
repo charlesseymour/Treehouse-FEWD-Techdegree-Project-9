@@ -29,6 +29,7 @@ body {
 #logo,
 #notification,
 #divider,
+#banner-personal,
 #avatar,
 #name {
   display: inline-block;
@@ -74,4 +75,42 @@ body {
 
 #name {
   font-size: .9em;
+}
+
+@media (min-width: 768px) {
+  #banner,
+  #banner-right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  #logo {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  
+  #logo,
+  #banner-right {
+    text-align: center;
+  }
+  
+  #banner {
+    display: block;
+  }
+  
+  #divider {
+    display: none;
+  }
+  
+  #notification {
+    display: block;
+    float: right;
+    width: 100%;
+  }
+  
+  #banner-right {
+    float: initial;
+    height: auto;
+  }
 }
