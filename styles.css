@@ -11,6 +11,13 @@ body {
   font-weight: lighter;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banner */
+
 #trademark {
   font-size:10px;
   vertical-align: super;  
@@ -88,8 +95,33 @@ body {
   font-size: .9em;
 }
 
+/* Navigation */
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(77,76,114);
+}
+
+.nav-box:nth-child(1) {
+  border: 3px solid transparent;
+  border-bottom: 3px solid rgb(133,219,128);
+}
+
+.nav-box:nth-child(1n+2) path {
+  fill: rgb(166,166,185);
+}
+
+svg {
+  height: 32px;
+  width: 32px;
+  margin: 15px;
+}
+
 @media (min-width: 768px) {
   
+  /* Banner */
   
   #banner {
     display: flex;
@@ -136,4 +168,5 @@ body {
   #banner-personal {
     display: flex;
     align-items: center;
+  }
 }
