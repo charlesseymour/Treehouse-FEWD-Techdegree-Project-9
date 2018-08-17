@@ -127,6 +127,8 @@ svg {
 
 #main {
   width: 100%;
+  position: relative;
+  background-color: rgb(255,255,255);
 }
 
 /* Search bar */
@@ -252,4 +254,29 @@ svg {
   svg {
     vertical-align: middle;
   }
+  
+  /* Search bar */
+  
+  #search {
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 20px;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  #search-wrapper {
+    width: 50%;
+  }
+  
+  #tab {
+    justify-content: flex-start;
+    padding: 0 20px;
+    position: absolute;
+    top: 0px;
+    background-color: rgb(255,255,255);
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid white;
+  }
+  
+  
 }
