@@ -189,10 +189,14 @@ svg {
   font-size: 0.8em;
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #message-close {
   float: right;
+  margin-left: 10px;
 }
 
 @media (min-width: 768px) {
