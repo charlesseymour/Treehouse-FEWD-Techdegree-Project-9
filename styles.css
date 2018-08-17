@@ -123,6 +123,49 @@ svg {
   margin: 15px;
 }
 
+/* Main */
+
+#main {
+  width: 100%;
+}
+
+/* Search bar */
+
+#search {
+  height: 65px;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-wrapper {
+  height: 50%;
+  width: 288px;
+  position: relative;
+}
+
+#search input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding-left: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#search input::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  color: lightgray;
+}
+
+#search-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 @media (min-width: 768px) {
   
   /* Banner */
