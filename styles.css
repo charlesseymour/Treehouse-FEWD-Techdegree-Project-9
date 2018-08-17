@@ -177,6 +177,24 @@ svg {
   font-size: 1.2em;
 }
 
+/* Alert */
+
+#alert-container {
+  padding: 0 20px;
+}
+
+#alert {
+  background-color: rgb(116, 119, 191);
+  color: white;
+  font-size: 0.8em;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#message-close {
+  float: right;
+}
+
 @media (min-width: 768px) {
   
   /* Banner */
@@ -278,5 +296,19 @@ svg {
     border-bottom: 1px solid white;
   }
   
+  /* Alert */
   
+  #alert-container {
+    padding: 20px;
+  }
+  
+  #alert {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #alert {
+    font-size: 1em;
+  }
 }
