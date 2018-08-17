@@ -137,6 +137,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(251,251,251);
 }
 
 #search-wrapper {
@@ -164,6 +165,14 @@ svg {
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+#tab {
+  display: flex;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
 }
 
 @media (min-width: 768px) {
