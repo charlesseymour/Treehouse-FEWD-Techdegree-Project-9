@@ -199,6 +199,30 @@ svg {
   margin-left: 10px;
 }
 
+/* Web traffic chart */
+  
+#web-traffic-container {
+  position: relative;
+}
+
+#web-traffic-chart-header {
+  padding: 20px;
+}
+
+#web-traffic-chart-title {
+  display: flex;
+  justify-content: center;
+}
+
+#web-traffic-options {
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+  font-size: .8em;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
 @media (min-width: 768px) {
   
   /* Banner */
@@ -309,6 +333,8 @@ svg {
   #alert {
     padding: 15px;
   }
+  
+  
 }
 
 @media (min-width: 1024px) {

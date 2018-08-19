@@ -6,8 +6,7 @@
     <title>Web App Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">   
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">   
   </head>
   <body>
     <div id="banner">
@@ -125,8 +124,25 @@
             <span id="message-close"><b>X</b></span>
           </div>
         </div>
+        <div id="web-traffic-chart-header">
+          <div id="web-traffic-chart-title"> 
+            TRAFFIC
+          </div>
+          <div>
+            <div id="web-traffic-options">
+              <span>Hourly</span>
+              <span>Daily</span>
+              <span>Weekly</span>
+              <span>Monthly</span>
+            </div>
+          </div>
+        </div>
+        <div id="web-traffic-container">
+          <canvas id="web-traffic-chart"></canvas>
+        </div>
       </main>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script> 
   <script src="scripts.js"></script>
 </html>
