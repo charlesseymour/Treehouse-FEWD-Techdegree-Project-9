@@ -200,6 +200,16 @@ svg {
 }
 
 /* Web traffic chart */
+
+.chart-option {
+  padding: 5px 15px;
+}
+
+.selected {
+  color: white;
+  background-color: rgb(129,201,143);
+  border-radius: 15px;
+}
   
 #web-traffic-container {
   position: relative;
@@ -341,9 +351,7 @@ svg {
     padding: 15px;
   }
   
-  #web-traffic-container {
-    
-  }
+  
 }
 
 @media (min-width: 1024px) {

@@ -58,8 +58,17 @@ var webTrafficWeekly = new Chart(ctx, {
   }
 })
 
-/*var webTrafficContainer = document.getElementById("web-traffic-container");
+const chartOptions = document.querySelectorAll(".chart-option");
 
-webTrafficContainer.style.height = "50vh";*/
+chartOptions.forEach(function(el) {
+  el.addEventListener('click', function(){
+    for (i=0; i < chartOptions.length; i++) {
+      if (this != chartOptions[i]) {
+        chartOptions[i].classList.remove("selected");
+      }
+      this.classList.add("selected");
+    }
+  })
+})
 
 
