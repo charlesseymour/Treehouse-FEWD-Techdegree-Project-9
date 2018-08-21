@@ -282,6 +282,7 @@ svg {
   
   #nav {
     flex-direction: column;
+    justify-content: flex-start;
   }
   
   .nav-box {
@@ -299,6 +300,12 @@ svg {
   
   svg {
     vertical-align: middle;
+  }
+  
+  /* Main */
+  
+  #main {
+    width: calc(100% - 98px);
   }
   
   /* Search bar */
@@ -334,7 +341,9 @@ svg {
     padding: 15px;
   }
   
-  
+  #web-traffic-container {
+    
+  }
 }
 
 @media (min-width: 1024px) {

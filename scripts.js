@@ -24,6 +24,7 @@ var webTrafficWeekly = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     layout: {
       padding: {
         left: 15,
@@ -37,9 +38,7 @@ var webTrafficWeekly = new Chart(ctx, {
     },
     scales: {
       xAxes: [{
-        //offset: true,
         gridLines: {
-          //offsetGridLines: true,
           drawTicks: false
         },
         ticks: {
@@ -47,9 +46,7 @@ var webTrafficWeekly = new Chart(ctx, {
         }
       }],
       yAxes: [{
-        //offset: true,
         gridLines: {
-          offsetGridLines: true,
           drawTicks: false
         },
         ticks: {
@@ -60,4 +57,9 @@ var webTrafficWeekly = new Chart(ctx, {
     }
   }
 })
+
+/*var webTrafficContainer = document.getElementById("web-traffic-container");
+
+webTrafficContainer.style.height = "50vh";*/
+
 
