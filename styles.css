@@ -215,6 +215,10 @@ svg {
   position: relative;
 }
 
+.hide {
+  display: none;
+}
+
 #web-traffic-chart-header {
   padding: 20px;
 }
