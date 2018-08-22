@@ -237,6 +237,14 @@ svg {
   padding-top: 10px;
 }
 
+/* Bar and pie charts */
+
+#bar-chart-header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 @media (min-width: 768px) {
   
   /* Banner */

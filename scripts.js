@@ -4,7 +4,7 @@ messageClose.addEventListener('click', () => {
   document.getElementById('alert').style.display = 'none';
 });
 
-var ctx = document.getElementById("web-traffic-chart");
+//var ctx = document.getElementById("web-traffic-chart");
 
 const chartSettings = {
   "hourly": {
@@ -30,7 +30,7 @@ const chartSettings = {
   }
 }
 
-var webTrafficChart = new Chart(ctx, {
+var webTrafficChart = new Chart(document.getElementById("web-traffic-chart"), {
   type: 'line',
   data: {
     labels: chartSettings.weekly.labels,
@@ -63,7 +63,8 @@ var webTrafficChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         gridLines: {
-          drawTicks: false
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: {
           padding: 10
@@ -71,7 +72,8 @@ var webTrafficChart = new Chart(ctx, {
       }],
       yAxes: [{
         gridLines: {
-          drawTicks: false
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: {
           padding: 10,
@@ -100,4 +102,50 @@ chartOptions.forEach(function(el) {
   })
 })
 
-
+var barChart = new Chart(document.getElementById("bar-chart"), {
+  type: 'bar',
+  data: {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    datasets: [{
+      backgroundColor: 'rgb(115, 119, 191)',
+      data: chartSettings.daily.data
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 15,
+        right: 20,
+        top: 0,
+        bottom: 0
+      }
+    }, 
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines: {
+          drawTicks: false,
+          drawBorder: false
+        },
+        ticks: {
+          padding: 10
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          drawTicks: false,
+          drawBorder: false
+        },
+        ticks: {
+          min: 0,
+          max: 220,
+          padding: 10,
+          stepSize: 20
+        }
+      }]
+    }
+  }
+})
