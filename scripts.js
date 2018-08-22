@@ -12,11 +12,21 @@ const chartSettings = {
                "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"],
     "data": [5, 3, 2, 1, 0, 3, 6, 8, 8, 10, 12, 12, 11, 7, 9, 13, 17, 19, 20, 19, 22, 17, 14, 10],
     "stepSize": 3
-  },  
+  },
+  "daily": {
+    "labels": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "data": [150, 130, 90, 100, 200, 45, 175],
+    "stepSize": 15
+  },
   "weekly": {
     "labels": ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     "data": [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750],
     "stepSize": 500
+  },
+  "monthly": {
+    "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "data": [5434, 7234, 1245, 9093, 6574, 1234, 8432, 8823, 4954, 9865, 8556, 4545],
+    "stepSize": 1000
   }
 }
 
