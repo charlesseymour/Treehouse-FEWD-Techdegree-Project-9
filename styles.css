@@ -369,7 +369,24 @@ svg {
     padding: 15px;
   }
   
+  /* Bar and pie charts */
+
+  #bar-pie-chart {
+    display: flex;
+  }
   
+  #bar-pie-chart-div1,
+  #bar-pie-chart-div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+  
+  #bar-chart-container,
+  #pie-chart-container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {

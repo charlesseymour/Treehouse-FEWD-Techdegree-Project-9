@@ -160,6 +160,7 @@ var pieChart = new Chart(document.getElementById("pie-chart"), {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     legend: {
       position: "right", 
       labels: {
