@@ -149,3 +149,22 @@ var barChart = new Chart(document.getElementById("bar-chart"), {
     }
   }
 })
+
+var pieChart = new Chart(document.getElementById("pie-chart"), {
+  type: 'doughnut',
+  data: {
+    labels: ["Phones", "Tablets", "Desktop"],
+    datasets: [{
+      backgroundColor: ['rgb(116,177,191)', 'rgb(129,201,143)', 'rgb(115,119,191)'],
+      data: [12,18,70]
+    }]
+  },
+  options: {
+    legend: {
+      position: "right", 
+      labels: {
+        boxWidth: 20
+      }
+    }
+  }
+})

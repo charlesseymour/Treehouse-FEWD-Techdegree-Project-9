@@ -239,7 +239,13 @@ svg {
 
 /* Bar and pie charts */
 
-#bar-chart-header {
+#bar-chart-container,
+#pie-chart-container {
+  position: relative;
+}
+
+#bar-chart-header,
+#pie-chart-header {
   display: flex;
   justify-content: center;
   padding: 20px;
