@@ -373,6 +373,7 @@ svg {
 
   #bar-pie-chart {
     display: flex;
+    margin-top: 20px;
   }
   
   #bar-pie-chart-div1,
@@ -381,6 +382,13 @@ svg {
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
+    padding: 20px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  #bar-pie-chart-div1 {
+    border-right: 1px solid lightgray;
   }
   
   #bar-chart-container,
