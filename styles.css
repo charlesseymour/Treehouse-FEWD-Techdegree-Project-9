@@ -256,6 +256,58 @@ svg {
   padding: 20px;
 }
 
+/* Social Media Stats */
+
+#social-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#social-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-stats {
+  color: rgb(116, 119, 191);
+  background-color: rgb(251, 251, 251);
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.social-icon-container {
+  background-color: rgb(115, 119, 191);
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#facebook {
+  transform: scale(1.1, 1.3);
+}
+
+.social-icon-container svg path {
+  fill: white;
+}
+
+.social-header {
+  font-weight: bold;
+}
+
+.social-number {
+  font-size: 3em;
+  color: dimgray;
+}
+
+
 @media (min-width: 768px) {
   
   /* Banner */
