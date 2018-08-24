@@ -277,6 +277,11 @@ svg {
   margin: 10px;
   padding: 10px;
   display: flex;
+  justify-content: center;
+}
+
+.social-stats:first-child {
+  padding-left: 25px;
 }
 
 .social-icon-container {
@@ -452,10 +457,30 @@ svg {
   #pie-chart-container {
     width: 100%;
   }
+  
+  
 }
 
 @media (min-width: 1024px) {
   #alert {
     font-size: 1em;
+  }
+  
+  /* Social Media Stats */
+  
+  #social-header {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+  
+  #social-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+  
+  .social-stats {
+    justify-content: flex-start;
+    padding: 25px;
   }
 }
