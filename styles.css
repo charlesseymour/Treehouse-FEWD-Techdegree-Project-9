@@ -447,10 +447,15 @@ svg {
     padding: 20px;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
   }
   
   #bar-pie-chart-div1 {
     border-right: 1px solid lightgray;
+  }
+  
+  #bar-pie-chart-div2 {
+    padding-right: 40px;
   }
   
   #bar-chart-container,
