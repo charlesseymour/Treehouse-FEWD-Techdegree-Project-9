@@ -500,7 +500,19 @@ hr {
   .member-listing {
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
   }
+  
+  .member-info {
+    flex-direction: row;    
+  }
+  
+  .member-pic {
+    margin-right: 10px;
+  }
+  
+  .member-name {
+    align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
