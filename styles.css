@@ -312,6 +312,19 @@ svg {
   color: dimgray;
 }
 
+/* New Members */
+
+#members-header {
+  width: 125px;
+  margin: 0 auto;
+}
+
+.member-listing {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 768px) {
   
