@@ -317,11 +317,30 @@ svg {
 #members-header {
   width: 125px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
-.member-listing {
+.member-info,
+.member-name,
+.member-join {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.email {
+  color: rgb(116, 119, 191); 
+}
+
+hr {
+  background-color: lightgray;
+  margin: 10px;
 }
 
 /* MEDIA QUERIES */
@@ -476,7 +495,12 @@ svg {
     width: 100%;
   }
   
+  /* New Members */
   
+  .member-listing {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1024px) {
