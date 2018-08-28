@@ -274,7 +274,7 @@ svg {
   background-color: rgb(251, 251, 251);
   border: 1px solid lightgray;
   border-radius: 3px;
-  margin: 10px;
+  margin: 10px 20px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -318,6 +318,7 @@ svg {
   width: 125px;
   margin: 0 auto;
   padding: 20px 0;
+  text-align: center;
 }
 
 .member-info,
@@ -341,6 +342,31 @@ svg {
 hr {
   background-color: lightgray;
   margin: 10px;
+  opacity: 0.3;
+}
+
+/* Activity */
+
+#activity-header {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.activity-description {
+  text-align: center;
+}
+
+.right_arrow {
+  height: 5px;
+  width: 5px;
+  border: solid rgb(127, 131, 196);
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin: 10px auto;
 }
 
 /* MEDIA QUERIES */
@@ -500,7 +526,8 @@ hr {
   .member-listing {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    margin: 0 20px;
+    align-items: center;
   }
   
   .member-info {
@@ -513,6 +540,17 @@ hr {
   
   .member-name {
     align-items: flex-start;
+  }
+  
+  hr {
+    margin: 10px 20px;
+  }
+  
+  /* Activity */
+  
+  .right_arrow {
+    margin: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -537,4 +575,51 @@ hr {
     justify-content: flex-start;
     padding: 25px;
   }
+  
+  /* New Members List */
+  
+  #members-activity-wrapper {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  #members {
+    display: inline-block;
+    width: 49%;
+    border-right: 1px solid lightgray;
+  }
+  
+  #members-header {
+    margin: 0 0 0 20px; 
+    text-align: left;
+  }
+  
+  .member-info {
+    font-size: 0.82em;
+  }
+  
+  .member-listing:last-of-type {
+    margin-bottom: 15px;
+  }
+  
+  hr {
+    margin: 20px;
+  }
+  
+  hr:last-child {
+    display: none;
+  }
+  
+  /* Activity */
+  
+  #activity {
+    display: inline-block;
+    width: 49%;
+  }
+  
+  #activity-header {
+    margin: 0 0 0 20px;
+    text-align: left;
+  }
+  
 }
