@@ -329,6 +329,10 @@ svg {
   align-items: center;
 }
 
+.member-name {
+  padding: 0 20px;
+}
+
 #main img {
   height: 40px;
   width: 40px;
@@ -341,7 +345,7 @@ svg {
 
 hr {
   background-color: lightgray;
-  margin: 10px;
+  margin: 10px 20px;
   opacity: 0.3;
 }
 
@@ -367,6 +371,132 @@ hr {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   margin: 10px auto;
+}
+
+/* Message form */
+
+#message {
+  margin-bottom: 20px;  
+}
+
+#message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message-header {
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#user-search,
+#message-box {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: rgb(251, 251, 251);
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+#user-search {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+#message-box {
+  height: 120px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+#user-search::placeholder,
+#message-box::placeholder {
+  font-family: 'Quicksand', sans-serif;
+  color: lightgray;
+}
+
+#send-button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(115, 119, 191);
+  height: 55px;
+  width: calc(100% - 40px);
+  border: 0px;
+  border-radius: 5px;
+}
+
+/* Settings */
+
+
+#settings-header {
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#settings,
+#settings-form,
+#notifications-widget,
+#public-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.onoffswitch {
+  margin: 10px 0;
+}
+
+.onoffswitch {
+    position: relative; width: 96px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #CACBCE; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #7478BF; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 21px; margin: 4.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 62px;
+    border: 2px solid #CACBCE; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
 }
 
 /* MEDIA QUERIES */
@@ -540,6 +670,7 @@ hr {
   
   .member-name {
     align-items: flex-start;
+    padding: 0;
   }
   
   hr {
@@ -621,5 +752,32 @@ hr {
     margin: 0 0 0 20px;
     text-align: left;
   }
+  
+  /* Messages */
+  
+  #message,
+  #settings {
+    display: inline-block;
+    width: 49%;
+    height: 373px;
+  }
+  
+  #message {
+    border-right: 1px solid lightgray;
+  }
+  
+  #message-header,
+  #settings-header {
+    margin: 0 0 0 20px;
+    text-align: left;
+  }
+  
+  #user-search, 
+  #message-box {
+    margin-bottom: 30px;
+  }
+  
+  /* Settings */
+  
   
 }
