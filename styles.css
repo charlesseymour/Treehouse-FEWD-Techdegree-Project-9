@@ -393,7 +393,8 @@ hr {
 }
 
 #user-search,
-#message-box {
+#message-box,
+#timezone {
   border: 1px solid lightgray;
   border-radius: 5px;
   padding-left: 10px;
@@ -414,12 +415,15 @@ hr {
 }
 
 #user-search::placeholder,
-#message-box::placeholder {
+#message-box::placeholder,
+#timezone {
   font-family: 'Quicksand', sans-serif;
   color: lightgray;
 }
 
-#send-button {
+#send-button,
+#save-button,
+#cancel-button {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   color: white;
@@ -497,6 +501,21 @@ hr {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
+}
+
+#timezone {
+  height: 40px;
+  margin: 15px 0;
+}
+
+#save-button, 
+#cancel-button {
+  display: block;
+  margin-top: 10px;
+}
+
+#cancel-button {
+  background-color: rgb(178, 178, 178);
 }
 
 /* MEDIA QUERIES */
