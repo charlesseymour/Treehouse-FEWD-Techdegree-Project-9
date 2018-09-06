@@ -447,7 +447,8 @@ hr {
 #settings,
 #settings-form,
 #notifications-widget,
-#public-widget {
+#public-widget,
+#settings-buttons-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -506,6 +507,10 @@ hr {
 #timezone {
   height: 40px;
   margin: 15px 0;
+}
+
+#settings-buttons-wrapper {
+  width: 100%;
 }
 
 #save-button, 
@@ -700,6 +705,42 @@ hr {
   
   .right_arrow {
     margin: 0;
+  }
+  
+  /* Settings */
+  
+  #settings-form {
+    width: 100%;
+  }
+  
+  #widget-wrapper,
+  #notifications-widget, 
+  #public-widget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #widget-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .widget-label {
+    margin-right: 10px;
+  }
+  
+  #settings-buttons-wrapper {
+    flex-direction: row;
+    padding: 0 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  #save-button,
+  #cancel-button {
+    width: calc(50% - 60px);
   }
 }
 

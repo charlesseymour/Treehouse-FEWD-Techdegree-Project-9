@@ -346,24 +346,26 @@
         <div id="settings">
           <div id="settings-header">SETTINGS</div>
           <form id="settings-form">
-            <div id="notifications-widget">
-              <span class="widget-label">Send Email Notifications</span>
-              <div class="onoffswitch">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification-switch" checked>
-                <label class="onoffswitch-label" for="notification-switch">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-                </label>
+            <div id="widget-wrapper">
+              <div id="notifications-widget">
+                <span class="widget-label">Send Email Notifications</span>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification-switch" checked>
+                  <label class="onoffswitch-label" for="notification-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
-            </div>
-            <div id="public-widget">
-              <span class="widget-label">Set Profile to Public</span>
-              <div class="onoffswitch">
-                <input type="checkbox" name="public" class="onoffswitch-checkbox" id="public-switch" checked>
-                <label class="onoffswitch-label" for="public-switch">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-                </label>
+              <div id="public-widget">
+                <span class="widget-label">Set Profile to Public</span>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="public" class="onoffswitch-checkbox" id="public-switch" checked>
+                  <label class="onoffswitch-label" for="public-switch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
               </div>
             </div>
             <select id="timezone">
@@ -451,8 +453,10 @@
               <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji</option>
               <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
             </select>
-            <button id="save-button" type="submit" value="SAVE">SAVE</button>
-            <button id="cancel-button" type="reset" value="CANCEL">CANCEL</button>
+            <div id="settings-buttons-wrapper">
+              <button id="save-button" type="submit" value="SAVE">SAVE</button>
+              <button id="cancel-button" type="reset" value="CANCEL">CANCEL</button>
+            </div>
           </form>
         </div>
       </div>
