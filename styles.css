@@ -740,7 +740,7 @@ hr {
   
   #save-button,
   #cancel-button {
-    width: calc(50% - 60px);
+    width: calc(50% - 30px);
   }
 }
 
@@ -815,6 +815,12 @@ hr {
   
   /* Messages */
   
+  #message-settings-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
   #message,
   #settings {
     display: inline-block;
@@ -826,18 +832,41 @@ hr {
     border-right: 1px solid lightgray;
   }
   
-  #message-header,
-  #settings-header {
-    margin: 0 0 0 20px;
+  #message-header {
+    margin: 0 0 5px 20px;
     text-align: left;
   }
   
-  #user-search, 
+  #user-search {
+    margin-bottom: 15px;
+  }
+  
   #message-box {
-    margin-bottom: 30px;
+    margin-bottom: 22px; 
   }
   
   /* Settings */
   
+  #settings-header {
+    margin: 0 0 0 20px;
+    text-align: left
+  }
   
+  #widget-wrapper {
+    flex-direction: column;
+  }
+  
+  #notifications-widget,
+  #public-widget {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .widget-label {
+    width: 200px;
+  }
+  
+  #timezone {
+    margin-top: 10px;
+  }
 }
