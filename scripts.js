@@ -169,3 +169,22 @@ var pieChart = new Chart(document.getElementById("pie-chart"), {
     }
   }
 })
+
+const sendButton = document.getElementById("send-button");
+
+sendButton.addEventListener('click', () => {
+  var messageHeader = document.getElementById('message-header');
+  var nameBox = document.getElementById('user-search');
+  var nameInput = name.value;
+  var messageBox = document.getElementById('message-box');
+  var messageInput = messageBox.value;
+  if (!nameInput) {
+    let nameAlert = document.createElement("p");
+    nameAlert.style.color = "red";
+    nameAlert.style.margin = "0 0 0 20px";
+    let nameAlertMessage = document.createTextNode("Please enter a user name");
+    nameAlert.appendChild(nameAlertMessage);
+    messageHeader.parentNode.insertBefore(nameAlert, messageHeader.nextSibling);
+  }
+  
+});
