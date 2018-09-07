@@ -6,7 +6,8 @@
     <title>Web App Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
     <div id="banner">
@@ -368,6 +369,7 @@
                 </div>
               </div>
             </div>
+            <div id="timezone-wrapper">
             <select id="timezone">
               <option value="" disabled selected>Select Timezone</option>
               <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
@@ -453,6 +455,7 @@
               <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji</option>
               <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
             </select>
+            </div>
             <div id="settings-buttons-wrapper">
               <button id="save-button" type="submit" value="SAVE">SAVE</button>
               <button id="cancel-button" type="reset" value="CANCEL">CANCEL</button>

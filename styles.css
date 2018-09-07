@@ -398,9 +398,14 @@ hr {
   border: 1px solid lightgray;
   border-radius: 5px;
   padding-left: 10px;
-  background-color: rgb(251, 251, 251);
-  width: calc(100% - 40px);
+  background-color: rgb(251, 251, 251); 
   box-sizing: border-box;
+}
+
+#user-search,
+#message-box,
+#timezone-wrapper {
+  width: calc(100% - 40px);
 }
 
 #user-search {
@@ -504,9 +509,35 @@ hr {
     right: 0px; 
 }
 
+#timezone-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
 #timezone {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   height: 40px;
+  width: 100%;
   margin: 15px 0;
+}
+
+#timezone-wrapper:after {
+  content: '\f078';
+  font: normal normal normal 15px/1 FontAwesome;
+  color: rgb(116, 120, 191);
+  right: 11px;
+  top: 10px;
+  height: 34px;
+  padding: 15px 0px 0px 8px;
+  position: absolute;
+  pointer-events: none;
 }
 
 #settings-buttons-wrapper {
@@ -868,5 +899,9 @@ hr {
   
   #timezone {
     margin-top: 10px;
+  }
+  
+  #timezone-wrapper:after {
+    top: 5px;
   }
 }
