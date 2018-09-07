@@ -172,19 +172,45 @@ var pieChart = new Chart(document.getElementById("pie-chart"), {
 
 const sendButton = document.getElementById("send-button");
 
-sendButton.addEventListener('click', () => {
-  var messageHeader = document.getElementById('message-header');
-  var nameBox = document.getElementById('user-search');
-  var nameInput = name.value;
-  var messageBox = document.getElementById('message-box');
-  var messageInput = messageBox.value;
+sendButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const messageDiv = document.getElementById('message');
+  const messageHeader = document.getElementById('message-header');
+  const nameBox = document.getElementById('user-search');
+  const nameInput = nameBox.value;
+  const messageBox = document.getElementById('message-box');
+  const messageInput = messageBox.value;
+  let alerts = messageDiv.querySelectorAll("p");
+  for (i = 0; i < alerts.length; i++) {
+    alerts[i].parentNode.removeChild(alerts[i]);
+  }
   if (!nameInput) {
     let nameAlert = document.createElement("p");
     nameAlert.style.color = "red";
     nameAlert.style.margin = "0 0 0 20px";
-    let nameAlertMessage = document.createTextNode("Please enter a user name");
-    nameAlert.appendChild(nameAlertMessage);
+    let nameAlertText = document.createTextNode("Please enter a user name");
+    nameAlert.appendChild(nameAlertText);
     messageHeader.parentNode.insertBefore(nameAlert, messageHeader.nextSibling);
   }
+  if (!messageInput) {
+    let messageAlert = document.createElement("p");
+    messageAlert.style.color = "red";
+    messageAlert.style.margin = "0 0 0 20px";
+    messageAlert.style.alignSelf = "flex-start";
+    let messageAlertText = document.createTextNode("Please enter a message");
+    messageAlert.appendChild(messageAlertText);
+    messageBox.parentNode.insertBefore(messageAlert, nameBox.nextSibling);
+  }
+  if (!nameInput || !messageInput) {
+    return false;
+  }
+  document.getElementById("message-form").submit();
+  document.getElementById("message-form").reset();
+  let sentAlert = document.createElement("p");
+  sentAlert.style.color = "red";
+  sentAlert.style.margin = "0 0 0 20px";
+  let sentAlertText = document.createTextNode("Message sent!");
+  sentAlert.appendChild(sentAlertText);
+  messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));
   
 });
