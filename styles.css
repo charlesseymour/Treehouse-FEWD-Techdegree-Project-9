@@ -78,7 +78,7 @@ body {
 #notification-dropdown {
   position: absolute;
   display: none;
-  top: 25px;
+  top: 35px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -614,6 +614,13 @@ select::-ms-expand {
   #notification {
     margin-right: 20px;  
     width: auto;
+  }
+  
+  #notification-dropdown {
+    width: 50vw;
+    -webkit-transform: initial;
+    transform: initial;
+    left: -40vw;
   }
   
   #banner-right {
