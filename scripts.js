@@ -1,10 +1,22 @@
+const notificationButton = document.getElementById('notification');
+const notificationDropdown = document.getElementById('notification-dropdown');
+let notificationDisplay = false;
+
+notificationButton.addEventListener('click', () => {
+  if (!notificationDisplay) {
+    notificationDropdown.style.display = 'initial';
+    notificationDisplay = true;
+  } else {
+    notificationDropdown.style.display = 'none';
+    notificationDisplay = false;
+  }
+});
+
 const messageClose = document.getElementById('message-close');
 
 messageClose.addEventListener('click', () => {
   document.getElementById('alert').style.display = 'none';
 });
-
-//var ctx = document.getElementById("web-traffic-chart");
 
 const chartSettings = {
   "hourly": {
@@ -214,3 +226,4 @@ sendButton.addEventListener('click', (e) => {
   messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));
   
 });
+

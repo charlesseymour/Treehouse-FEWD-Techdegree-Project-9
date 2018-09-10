@@ -65,6 +65,7 @@ body {
 
 #notification {
   display: block;
+  position: relative;
   float: right;
   width: 100%;
 }
@@ -72,6 +73,36 @@ body {
 #notification img {
   height: 23px;
   width: 23px;
+}
+
+#notification-dropdown {
+  position: absolute;
+  display: none;
+  top: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: HoneyDew;
+  color: black;
+  width: 90vw;
+  z-index: 100;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+#notification-dropdown ul {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+#notification-dropdown ul li:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 10px auto;
+    background: lightgray;
 }
 
 #divider {
