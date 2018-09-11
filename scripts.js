@@ -2,7 +2,7 @@ const notificationButton = document.getElementById('notification');
 const notificationDropdown = document.getElementById('notification-dropdown');
 let notificationDisplay = false;
 
-notificationButton.addEventListener('click', () => {
+notificationButton.addEventListener('click', function() {
   if (!notificationDisplay) {
     notificationDropdown.style.display = 'initial';
     notificationDisplay = true;
@@ -14,7 +14,7 @@ notificationButton.addEventListener('click', () => {
 
 const messageClose = document.getElementById('message-close');
 
-messageClose.addEventListener('click', () => {
+messageClose.addEventListener('click', function() {
   document.getElementById('alert').style.display = 'none';
 });
 
@@ -97,6 +97,16 @@ var webTrafficChart = new Chart(document.getElementById("web-traffic-chart"), {
 })
 
 const chartOptions = document.querySelectorAll(".chart-option");
+
+/* explicitly define chartOptions.forEach() for IE */
+
+if (!chartOptions.forEach) {
+    chartOptions.forEach = function(fn, scope) {
+        for(var i = 0, len = this.length; i < len; ++i) {
+            fn.call(scope, this[i], i, this);
+        }
+    }
+}
 
 chartOptions.forEach(function(el) {
   el.addEventListener('click', function(){
@@ -270,7 +280,7 @@ autocomplete(document.getElementById("user-search"), users);
 
 const sendButton = document.getElementById("send-button");
 
-sendButton.addEventListener('click', (e) => {
+sendButton.addEventListener('click', function(e) {
   e.preventDefault();
   const messageDiv = document.getElementById('message');
   const messageHeader = document.getElementById('message-header');
