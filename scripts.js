@@ -321,6 +321,45 @@ sendButton.addEventListener('click', function(e) {
   let sentAlertText = document.createTextNode("Message sent!");
   sentAlert.appendChild(sentAlertText);
   messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));
-  
 });
+
+
+const saveSettingsButton = document.getElementById('save-button');
+const cancelSettingsButton = document.getElementById('cancel-button');
+const notificationSwitch = document.getElementById('notification-switch');
+const publicSwitch = document.getElementById('public-switch');
+const timezoneMenu = document.getElementById('timezone');
+
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch(e) {
+    return false;  
+  }
+}
+
+function prefillSettings() {
+  notificationSwitch.checked = JSON.parse(localStorage.notify);
+  publicSwitch.checked = JSON.parse(localStorage.public);
+  timezoneMenu.value = localStorage.timezone;
+}
+
+window.onload = function() {
+  if (supportsLocalStorage()) {
+    prefillSettings(); 
+    saveSettingsButton.addEventListener('click', function(e) {
+      //e.preventDefault();
+      localStorage.setItem('notify', notificationSwitch.checked);
+      localStorage.setItem('public', publicSwitch.checked);
+      localStorage.setItem('timezone', timezoneMenu.value);
+      prefillSettings();
+    })
+    cancelSettingsButton.addEventListener('click', function(e){
+      e.preventDefault();
+      prefillSettings();
+    })
+  }
+}
+
+
 
