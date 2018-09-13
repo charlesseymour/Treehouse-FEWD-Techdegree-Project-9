@@ -75,6 +75,16 @@ body {
   width: 23px;
 }
 
+#notification-marker {
+  height: 5px;
+  width: 5px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+}
+
 #notification-dropdown {
   position: absolute;
   display: none;

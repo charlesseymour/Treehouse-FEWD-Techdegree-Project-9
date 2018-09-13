@@ -1,4 +1,7 @@
+// Toggle notification dropdown 
+
 const notificationButton = document.getElementById('notification');
+const notificationMarker = document.getElementById('notification-marker');
 const notificationDropdown = document.getElementById('notification-dropdown');
 let notificationDisplay = false;
 
@@ -10,13 +13,20 @@ notificationButton.addEventListener('click', function() {
     notificationDropdown.style.display = 'none';
     notificationDisplay = false;
   }
+  notificationMarker.style.visibility = 'hidden';
 });
+
+// Close alert box
 
 const messageClose = document.getElementById('message-close');
 
 messageClose.addEventListener('click', function() {
   document.getElementById('alert').style.display = 'none';
 });
+
+// Traffic charts
+
+// data for the various charts
 
 const chartSettings = {
   "hourly": {
@@ -41,6 +51,8 @@ const chartSettings = {
     "stepSize": 1000
   }
 }
+
+// Weekly traffic chart
 
 var webTrafficChart = new Chart(document.getElementById("web-traffic-chart"), {
   type: 'line',
@@ -96,9 +108,12 @@ var webTrafficChart = new Chart(document.getElementById("web-traffic-chart"), {
   }
 })
 
+// All web traffic charts are listed in index.html, but only one is displayed at a time.
+// Define chartOptions as a NodeList of all these charts.
+
 const chartOptions = document.querySelectorAll(".chart-option");
 
-/* explicitly define chartOptions.forEach() for IE */
+// explicitly define chartOptions.forEach() for IE 
 
 if (!chartOptions.forEach) {
     chartOptions.forEach = function(fn, scope) {
@@ -107,6 +122,8 @@ if (!chartOptions.forEach) {
         }
     }
 }
+
+// Add event listener to each chart button to display corresponding data on click
 
 chartOptions.forEach(function(el) {
   el.addEventListener('click', function(){
@@ -123,6 +140,8 @@ chartOptions.forEach(function(el) {
     webTrafficChart.update();
   })
 })
+
+// Add bar chart for daily traffic
 
 var barChart = new Chart(document.getElementById("bar-chart"), {
   type: 'bar',
@@ -172,6 +191,8 @@ var barChart = new Chart(document.getElementById("bar-chart"), {
   }
 })
 
+// Add pie chart for traffic by device type
+
 var pieChart = new Chart(document.getElementById("pie-chart"), {
   type: 'doughnut',
   data: {
@@ -192,6 +213,8 @@ var pieChart = new Chart(document.getElementById("pie-chart"), {
   }
 })
 
+// User data for message box
+
 var users = [
   "Victoria Chambers",
   "Dale Byrd",
@@ -208,6 +231,10 @@ var users = [
   "Cormac McCarthy",
   "William Faulkner"
 ]
+
+// Message form
+
+// Autocomplete function for user search box in message form
 
 function autocomplete(inp, arr) {
   var currentFocus;
@@ -278,6 +305,8 @@ document.addEventListener("click", function (e) {
 
 autocomplete(document.getElementById("user-search"), users);
 
+// Simulate submitting message form
+
 const sendButton = document.getElementById("send-button");
 
 sendButton.addEventListener('click', function(e) {
@@ -322,12 +351,15 @@ sendButton.addEventListener('click', function(e) {
   setTimeout(function(){messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));}, 500);
 });
 
+// Settings form
 
 const saveSettingsButton = document.getElementById('save-button');
 const cancelSettingsButton = document.getElementById('cancel-button');
 const notificationSwitch = document.getElementById('notification-switch');
 const publicSwitch = document.getElementById('public-switch');
 const timezoneMenu = document.getElementById('timezone');
+
+// Check if browser supports local storage
 
 function supportsLocalStorage() {
   try {
@@ -337,11 +369,16 @@ function supportsLocalStorage() {
   }
 }
 
+// Define function to set fields in settings form to values in local storage
+
 function prefillSettings() {
   notificationSwitch.checked = JSON.parse(localStorage.notify);
   publicSwitch.checked = JSON.parse(localStorage.public);
   timezoneMenu.value = localStorage.timezone;
 }
+
+// When window loads, prefill the form fields and add
+// event listeners to save and cancel buttons
 
 window.onload = function() {
   if (supportsLocalStorage()) {
