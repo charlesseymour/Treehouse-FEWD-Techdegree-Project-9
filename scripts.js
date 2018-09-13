@@ -313,14 +313,13 @@ sendButton.addEventListener('click', function(e) {
   if (!nameInput || !messageInput) {
     return false;
   }
-  document.getElementById("message-form").submit();
   document.getElementById("message-form").reset();
   let sentAlert = document.createElement("p");
   sentAlert.style.color = "red";
   sentAlert.style.margin = "0 0 0 20px";
   let sentAlertText = document.createTextNode("Message sent!");
   sentAlert.appendChild(sentAlertText);
-  messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));
+  setTimeout(function(){messageDiv.insertBefore(sentAlert, document.getElementById("message-form"));}, 500);
 });
 
 
@@ -363,13 +362,18 @@ window.onload = function() {
       saveAlert.style.margin = "0 0 0 20px";
       let saveMessage = document.createTextNode('Your settings have been saved');
       saveAlert.appendChild(saveMessage);
-      let settingsForm = document.getElementById('settings-form');
-      settingsDiv.insertBefore(saveAlert, settingsForm);
+      let settingsForm = document.getElementById('settings-form');      
       location.hash = '';
       location.hash = '#' + 'send-button';
+      setTimeout(function(){settingsDiv.insertBefore(saveAlert, settingsForm);}, 500);
     })
     cancelSettingsButton.addEventListener('click', function(e){
       e.preventDefault();
+      let settingsDiv = document.getElementById('settings');
+      let alerts = settingsDiv.querySelectorAll("p");
+      for (i = 0; i < alerts.length; i++) {
+        alerts[i].parentNode.removeChild(alerts[i]);
+      }
       prefillSettings();
     })
   }
