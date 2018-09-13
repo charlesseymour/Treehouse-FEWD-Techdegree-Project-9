@@ -50,7 +50,7 @@ const chartSettings = {
     "data": [5434, 7234, 1245, 9093, 6574, 1234, 8432, 8823, 4954, 9865, 8556, 4545],
     "stepSize": 1000
   }
-}
+};
 
 // Weekly traffic chart
 
@@ -106,7 +106,7 @@ var webTrafficChart = new Chart(document.getElementById("web-traffic-chart"), {
       }]
     }
   }
-})
+});
 
 // All web traffic charts are listed in index.html, but only one is displayed at a time.
 // Define chartOptions as a NodeList of all these charts.
@@ -120,7 +120,7 @@ if (!chartOptions.forEach) {
         for(var i = 0, len = this.length; i < len; ++i) {
             fn.call(scope, this[i], i, this);
         }
-    }
+    };
 }
 
 // Add event listener to each chart button to display corresponding data on click
@@ -138,8 +138,8 @@ chartOptions.forEach(function(el) {
     webTrafficChart.data.datasets[0].data = chartInfo.data;
     webTrafficChart.options.scales.yAxes[0].ticks.stepSize = chartInfo.stepSize;
     webTrafficChart.update();
-  })
-})
+  });
+});
 
 // Add bar chart for daily traffic
 
@@ -189,7 +189,7 @@ var barChart = new Chart(document.getElementById("bar-chart"), {
       }]
     }
   }
-})
+});
 
 // Add pie chart for traffic by device type
 
@@ -211,7 +211,7 @@ var pieChart = new Chart(document.getElementById("pie-chart"), {
       }
     }
   }
-})
+});
 
 // User data for message box
 
@@ -230,7 +230,7 @@ var users = [
   "C. S. Lewis",
   "Cormac McCarthy",
   "William Faulkner"
-]
+];
 
 // Message form
 
@@ -409,7 +409,7 @@ window.onload = function() {
       location.hash = '';
       location.hash = '#' + 'send-button';
       setTimeout(function(){settingsDiv.insertBefore(saveAlert, settingsForm);}, 500);
-    })
+    });
     cancelSettingsButton.addEventListener('click', function(e){
       e.preventDefault();
       let settingsDiv = document.getElementById('settings');
@@ -418,9 +418,9 @@ window.onload = function() {
         alerts[i].parentNode.removeChild(alerts[i]);
       }
       prefillSettings();
-    })
+    });
   }
-}
+};
 
 
 
