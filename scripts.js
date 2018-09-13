@@ -348,11 +348,25 @@ window.onload = function() {
   if (supportsLocalStorage()) {
     prefillSettings(); 
     saveSettingsButton.addEventListener('click', function(e) {
-      //e.preventDefault();
+      e.preventDefault();
+      let settingsDiv = document.getElementById('settings');
+      let alerts = settingsDiv.querySelectorAll("p");
+      for (i = 0; i < alerts.length; i++) {
+        alerts[i].parentNode.removeChild(alerts[i]);
+      }
       localStorage.setItem('notify', notificationSwitch.checked);
       localStorage.setItem('public', publicSwitch.checked);
       localStorage.setItem('timezone', timezoneMenu.value);
       prefillSettings();
+      let saveAlert = document.createElement('p');
+      saveAlert.style.color = 'red';
+      saveAlert.style.margin = "0 0 0 20px";
+      let saveMessage = document.createTextNode('Your settings have been saved');
+      saveAlert.appendChild(saveMessage);
+      let settingsForm = document.getElementById('settings-form');
+      settingsDiv.insertBefore(saveAlert, settingsForm);
+      location.hash = '';
+      location.hash = '#' + 'send-button';
     })
     cancelSettingsButton.addEventListener('click', function(e){
       e.preventDefault();
