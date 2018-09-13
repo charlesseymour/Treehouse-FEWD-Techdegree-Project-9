@@ -369,6 +369,7 @@ function supportsLocalStorage() {
   }
 }
 
+
 // Define function to set fields in settings form to values in local storage
 
 function prefillSettings() {
