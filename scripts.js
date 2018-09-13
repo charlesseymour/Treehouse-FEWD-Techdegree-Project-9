@@ -372,9 +372,15 @@ function supportsLocalStorage() {
 // Define function to set fields in settings form to values in local storage
 
 function prefillSettings() {
-  notificationSwitch.checked = JSON.parse(localStorage.notify);
-  publicSwitch.checked = JSON.parse(localStorage.public);
-  timezoneMenu.value = localStorage.timezone;
+  if (localStorage.notify) {
+    notificationSwitch.checked = JSON.parse(localStorage.notify);
+  }
+  if (localStorage.public) {
+    publicSwitch.checked = JSON.parse(localStorage.public);
+  }
+  if (localStorage.timezone) {
+    timezoneMenu.value = localStorage.timezone;
+  }
 }
 
 // When window loads, prefill the form fields and add
